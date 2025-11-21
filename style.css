@@ -1,0 +1,647 @@
+:root {
+    --primary-color: #01A8EC;
+    --secondary-color: #A8518A;
+    --tertiary-color: red;
+    --background-color: #FFFFFF;
+    --background-color-alt: #13269c;
+    --text-color: #000000;
+    --accent-color: #fdf910;
+    --hover-color: #11c1ec;
+}
+
+
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background-color);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+  background-color: var(--background-color-alt);
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+
+/* Navbar Container */
+nav .container {
+  display: flex;
+  justify-content: space-between; /* logo on left, menu on right */
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+.nav-left {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.logo {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--background-color)
+}
+
+/* Menu Links */
+.nav-right ul {
+  display: flex;
+  list-style: none;
+  gap: 25px; 
+}
+.nav-right ul li a {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.nav-right ul li a:hover {
+  color: var(--hover-color); 
+  opacity: .3s;
+  font-weight: bold;
+}
+
+.nav-right ul li a.active {
+  color: var(--accent-color);  
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent-color); 
+}
+
+/* Special Buttons */
+.nav-right .call-btn {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.appointment-btn {
+  background: var(--primary-color);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  
+}
+.appointment-btn:hover {
+  background: var(--accent-color);  
+}
+
+.nav-right a.appointment-btn {
+  color: var(--background-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-right a.appointment-btn:hover {
+  color: var(--text-color);
+}
+
+
+/* ===== HERO SECTION ===== */
+/* #home{
+  padding: 5vw;
+  background-color: var(--background-color-alt);
+  display: flex;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+#home {
+  min-height: 100vh;
+  margin: auto;
+  padding: 12vw 0;
+  text-align: center;
+  background-color: var(--background-color-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;            
+  max-width: 1100px;
+  color: white;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.hero-text {
+  flex: 1; 
+}
+
+.hero-image {
+  flex: 1; 
+}
+
+.hero-image img {
+  width: 100%; 
+  height: auto;
+  border-radius: 40px 0;
+  display: block; 
+  box-shadow: 0 4px 8px rgba(182, 219, 14, 0.8);
+}
+
+.hero-text p{
+  font-size: 1.2rem;
+  margin-bottom: .6rem;
+  /* line-height: 1.6; */
+}
+
+.hero-text p span{
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+h1 span {
+  /* background-color: var(--accent-color); */
+  color: var(--accent-color);
+  /* border-radius: 5px; */
+}
+
+.hero-text2 {
+  font-size: 1rem;
+  line-height: 1.5rem;  
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  line-height: 3rem;
+  font-weight: bold;  
+  font-family: poppins, sans-serif; 
+}
+
+.hero-container li{
+  list-style: none;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.hero-container a.appointment-btn {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.hero-container a.appointment-btn:hover {
+  margin-top: 1rem;
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* section { */
+  /* padding: 100px 20px;
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: auto;
+  opacity: 0; */
+  /* transform: translateY(50px);
+  transition: all 1s ease; */
+
+/* section.show {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+
+#home h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+#home p {
+  font-size: 1.2rem;
+}
+/* #services {
+  background: #ffffff;
+}
+#about {
+  background: #e0f7fa;
+}
+#contact {
+  background: #ffffff;
+} */
+
+/* ===== Appointment Form ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+form input,
+form textarea,
+form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+form button {
+  background: #0077b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form button:hover {
+  background: #005f8a;
+}
+#formMessage {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+
+
+/* ===== Responsive ===== */
+/* ===== Mobile Menu Styles ===== */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.container2{
+  margin: 10vh;
+  display: flex;
+}
+
+#services, #about{
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 20px 0 0;
+  align-content: center;
+  text-align: justify;
+  flex: 1;
+}
+
+#services:hover, #about:hover{
+  background-color: var(--hover-color);
+  box-shadow: 0 4px 8px rgba(26, 25, 8, 0.8);
+  transition: .20s;
+  color: var(--text-color);
+  font-weight: bolder;
+  /* transform: translateX(10px); */
+}
+
+#services h2, #about h2{
+  font-weight: 600;
+  color: var(--accent-color);
+}
+#services h2::after, #about h2::after{
+  content: "  _____________";
+  color: var(--background-color);
+}
+
+#services{
+  background-color: var(--background-color-alt); 
+  color: var(--background-color);
+  font-weight: bolder;
+}
+
+#about{
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+#appointment-container{
+  margin: 10vh;
+  background-color: var(--background-color-alt);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#appointment-container h2{
+  color: var(--accent-color);
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+#appointment-container p{
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--background-color);
+}
+
+form label{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: var(--background-color);
+  padding-left: 5px;
+}
+
+.form-details button{
+  width: 20%;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.form-details button::after{
+  content: "  ➡";
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.form-details button:hover{
+  background-color: var(--accent-color);
+  transition: .20ms;
+  color: var(--text-color); 
+  opacity: .1s;
+  font-weight: bold;
+}
+
+.form-details button:hover:after{
+  content: "  ➡";
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+/* .form-details{
+  position: relative;
+  margin: 1rem 0;
+  /* width: 300px; */
+
+
+/* .form-details input{
+  width: 100%;
+  padding: 14px 12px 10px;
+  font-size: 16px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+  background-color: var(--background-color);
+  outline: none;
+} */
+
+/* .form-details label{
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  font-size: 16px;
+  color: var(--text-color);
+  pointer-events: none;
+  transition: transform 150ms ease, font-size 150ms ease, top 150ms ease;
+  background: white;
+  padding: 0 4px;  
+} */
+
+/* .form-details:focus+label, .form-details:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 12px;
+  color: var(--accent-color);
+  transform: translateY(0);
+} */ 
+
+.contactdetails{
+  margin: 0 10vh 5vh 10vh;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  height: 150px;
+  border-radius: 20px;
+  align-content: center;
+  align-self: center;
+  padding-left: 20px;
+}
+
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  background: var(--background-color-alt);
+  color: white;
+  padding: 1rem;
+}
+
+footer a {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+
+
+/* MOBILE (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
+
+  .nav-right ul {
+    position: absolute;
+    top: 70px; /* below navbar */
+    right: 0;
+    width: 100%;
+    background: var(--background-color-alt);
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 0;
+    text-align: center;
+    display: none; /* hidden by default */
+    border-radius: 0 0 8px 8px;
+  }
+
+  .nav-right ul.active {
+    display: flex; /* show when toggled */
+  }
+
+  /* Buttons fill width on mobile */
+  .appointment-btn,
+  .call-btn {
+    display: block;
+    text-align: center;
+  }
+
+  /* Hero goes stacked */
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5vh;
+  }
+
+  .hero-container h1{
+    font-size: 2.6rem;
+  }
+
+  .hero-container .hero-text p{
+    font-size: 1rem;    
+  }
+
+  .hero-container .hero-text h1{
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+
+.container2{
+  display: flex;
+  flex-direction: column;
+  margin: 4vh;
+}
+
+#services, #about{
+  width: 100%;
+  margin-bottom: 5vh;
+}
+
+#services h2, #about h2{
+  font-size: 1.2rem;
+}
+
+#appointment-container{
+  margin: 5vh;
+  padding: 15px;
+}
+
+#contact{
+  margin: 5vh;
+}
+
+#contact h2{
+  font-size: 1.5rem;
+}
+
+.form-details button{
+  width: 50%;
+}
+
+.contactdetails{
+  margin: 5vh;
+}
+
+}
+
+/* TABLET (769px – 1024px) */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .nav-right ul {
+        gap: 10px;
+    }
+
+    /* Keep hamburger visible on tablet */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide full menu by default */
+    .nav-right ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 15px 0;
+        background: var(--background-color-alt);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* When active */
+    .nav-right ul.active {
+        display: flex;
+    }
+
+    /* Adjust Book Appointment button */
+    .nav-btn, button {
+        width: auto;
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   MOBILE + TABLET NAVIGATION FIX
+   ========================================= */
+
+/* Hide nav list by default on mobile/tablet */
+@media (max-width: 1024px) {
+    .nav-right ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--background-color-alt);
+        width: 100%;
+        flex-direction: column;
+        padding: 20px 0;
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+        z-index: 999;
+    }
+
+    /* Show on toggle */
+    .nav-right ul.active {
+        display: flex;
+    }
+
+    /* Hamburger visible */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        margin-left: 20px;
+    }
+
+    /* Hide desktop nav buttons */
+    .nav-left img {
+        width: 55px;
+    }
+}
+
+
+/* Desktop – show normal menu, hide hamburger */
+@media (min-width: 1025px) {
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .nav-right ul {
+        display: flex !important;
+    }
+}
+
